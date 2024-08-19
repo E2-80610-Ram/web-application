@@ -1,0 +1,16 @@
+Bootstrap: docker
+From: ubuntu:latest
+
+%post
+    apt-get update && apt-get install -y gcc
+
+%files
+    main.c /usr/src/matrix_multiplication/
+    test_multiplication.c /usr/src/matrix_multiplication/
+
+%build
+    gcc /usr/src/matrix_multiplication/main.c -o /usr/local/bin/matrix_multiplication
+    gcc /usr/src/matrix_multiplication/test_multiplication.c -o /usr/local/bin/test_multiplication
+
+%runscript
+    exec /usr/local/bin/matrix_multiplication
