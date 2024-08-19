@@ -1,6 +1,6 @@
-name: Docker Image CI
+name: C Matrix Multiplication CI/CD
 
-on:
+on: [push, pull_request]
 
 
 jobs:
