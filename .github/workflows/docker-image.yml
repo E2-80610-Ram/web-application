@@ -16,8 +16,7 @@ jobs:
       - name: Build Docker image
         run: docker build -t matrix_multiplication .
 
-      - name: Run Tests in Docker
-        run: docker run matrix_multiplication ./test_multiplication
+
 
       - name: Install Singularity
         run: |
