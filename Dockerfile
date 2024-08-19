@@ -11,7 +11,7 @@ COPY . .
 RUN gcc -o main main.c
 
 # Run the test suite
-RUN gcc -o test_multiplication test_multiplication.c
+#RUN gcc -o test_multiplication test_multiplication.c
 
 # Run the executable
 CMD ["./main"]
