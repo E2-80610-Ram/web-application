@@ -21,7 +21,7 @@ jobs:
       - name: Install Singularity
         run: |
           sudo apt-get update
-          sudo apt-get install -y singularity-container
+          sudo apt-get install -y singularity-ce
 
       - name: Build Singularity Image
         run: singularity build matrix_multiplication.sif singularity.def
